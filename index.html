@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Brawl Arena</title>
+  </head>
+  <body>
+    <div id="game-root">
+      <canvas id="game-canvas"></canvas>
+
+      <div id="hud" class="hidden">
+        <div class="hud-card">
+          <b>KNOCKOUT</b>
+          <span id="round-status">Defeat opposing brawlers</span>
+        </div>
+        <div class="hud-card score">
+          <span id="team-score">0</span><span>:</span><span id="enemy-score">0</span>
+        </div>
+        <button id="exit-btn" class="small-btn">Меню</button>
+      </div>
+
+      <div id="menu" class="screen-panel">
+        <div class="menu-card">
+          <img src="/assets/character_clean.png" alt="Brawler" class="hero-icon" />
+          <p class="eyebrow">Prototype</p>
+          <h1>Brawl Arena</h1>
+          <p class="subtitle">Один режим: Knockout. Одна карта. Персонаж пока один для всех.</p>
+          <button id="play-btn" class="main-btn">Начать игру</button>
+          <p class="hint">WASD / стрелки — движение, мышь — прицел, клик / Space — выстрел. На телефоне — джойстик и кнопка огня.</p>
+        </div>
+      </div>
+
+      <div id="banner" class="banner hidden">
+        <b>KNOCKOUT</b>
+        <span>Defeat opposing brawlers!</span>
+      </div>
+
+      <div id="mobile-controls" class="hidden">
+        <div id="joy-base"><div id="joy-stick"></div></div>
+        <button id="fire-btn">●</button>
+      </div>
+
+      <div id="rotate-warning">
+        <div>
+          <b>Переверните телефон</b>
+          <span>Игра запускается в горизонтальном режиме</span>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
